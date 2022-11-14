@@ -1,0 +1,13 @@
+h3 {
+	color: Coral;
+	font-size: xxx-large;
+	font-family: Roboto, Helvetica, sans-serif;
+	font-weight: bold;
+	text-shadow: -2px 2px 3px cornflowerblue;
+}
+p {
+	color: DarkCyan;
+	font-size: large;
+	font-family: Raleway, Helvetica, sans-serif;
+	font-weight: bold;
+}

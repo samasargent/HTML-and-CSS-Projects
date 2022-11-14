@@ -1,0 +1,16 @@
+table {
+	border: 3px solid mistyrose;
+	font-family: Raleway, Arial, sans-serif;
+}
+td:hover {
+	background-color: powderblue;
+	color: black;
+}
+tr, th {
+	background-color: Rebeccapurple;
+	color: snow;
+}
+tr, td {
+	background-color: navy;
+	color: white;
+}
