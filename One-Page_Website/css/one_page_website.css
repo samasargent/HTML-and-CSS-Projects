@@ -1,8 +1,46 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 110%;
 }
 
+h1, h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-kerning: auto;
+}
+
+/* ============================================
+    NAVIGATION STYLES
+==============================================*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(113, 2, 93);
+    font-size: 80%;
+  }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: rgb(177, 68, 157);;
+  }
+
+/* ============================================
+    NEWLSETTER STYLES
+==============================================*/
 form input[type="text"],
 input[type="email"],
 input[type="tel"] {
@@ -10,4 +48,5 @@ input[type="tel"] {
     margin: 0px 5%;
     border: 2px solid #808080;
     border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
