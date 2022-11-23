@@ -1,0 +1,9 @@
+body  {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    p {
+        color: blue;
+    }
+}

@@ -1,0 +1,74 @@
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+/* HEADER FORMATTING */
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* IMAGE FORMATTING */
+.grayscale img {
+    filter: grayscale(100%) opacity(50%);
+    border-radius: 0px 100px;
+    padding: 30px;
+}
+
+.grayscale img:hover {
+    filter: grayscale(25%);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*TABLE FORMATTING */
+table {
+    width: 40%;
+}
+
+table,
+td {
+    border: 1px solid rgb(131, 0, 175);
+    border-collapse: collapse;
+}
+
+th {
+    background-color: dodgerblue;
+    color: white;
+}
+
+tr:hover {
+    background-color: rgb(200, 255, 237);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* FOOTER FORMATTING */
+footer {
+    text-align: center;
+    font-weight: 700;
+}
