@@ -3,13 +3,12 @@ This repository contains HTML and CSS projects from the bootcamp I am doing with
 
 ## Projects
 
+* [Stained Glass Site](https://github.com/samasargent/HTML-and-CSS-Projects/tree/main/websiteProject)
+* [Drive-in Theater Site](https://github.com/samasargent/HTML-and-CSS-Projects/tree/main/bootstrap4_project)
+
 ### Stained Glass Site
 
 This is an example home page for a company who makes and sells stained glass windows. It's styled using CSS and contains a navbar, image containers and a contact form.
-
-### Seattle Musicals Site
-
-This page is an example home for a page promoting musicals in the Seattle area. It's styled using CSS. 
 
 ### Drive-in Theater Site
 
