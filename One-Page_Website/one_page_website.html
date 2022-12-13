@@ -3,66 +3,110 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Seattle Musicals</title>
 	<link rel="stylesheet" href="./css/one_page_website.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap"
+		rel="stylesheet">
+	<script src="Js/one_page_website.js"></script>
 </head>
 
 <body>
 
 	<!-- NAV -->
-	<div>
-		<ul>
-			<li><a href="#home">Home</a></li>
-			<li><a href="#gallery">Gallery</a></li>
-			<li><a href="#video">Videos</a></li>
-			<li><a href="#newsletter">Newsletter</a></li>
-		</ul>
+	<div class="wrap">
+		<div class="menu-container">
+			<ul class="menu">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#video">Videos</a></li>
+				<li><a href="#newsletter">Newsletter</a></li>
+			</ul>
+		</div>
 	</div>
 	<!-- END NAV -->
 
 	<!-- HOME -->
 	<div id="home">
-		<div>
-			<h1>Seattle Musicals</h1>
+		<div class="container">
+			<div class="text-center">
+				<h1 class="head-main">&nbsp;Seattle Musicals&nbsp;</h1>
+			</div>
 		</div>
 	</div>
 	<!-- END HOME -->
 
 	<!-- GALLERY -->
-	<section>
-		<div id="gallery">
-			<h2>Gallery</h2>
-			<div>
+	<div class="row">
+		<div class="column">
+			<img src="./images/thumb/moulin-rouge_small.jpg" style="width:100%" onclick="openModal();currentSlide(1)"
+				class="hover-shadow cursor">
+		</div>
+		<div class="column">
+			<img src="./images/thumb/hamilton_small.jpg" style="width:100%" onclick="openModal();currentSlide(2)"
+				class="hover-shadow cursor">
+		</div>
+		<div class="column">
+			<img src="./images/thumb/rent_small.jpg" style="width:100%" onclick="openModal();currentSlide(3)"
+				class="hover-shadow cursor">
+		</div>
+		<div class="column">
+			<img src="./images/thumb/wizard-of-oz_small.jpg" style="width:100%" onclick="openModal();currentSlide(4)"
+				class="hover-shadow cursor">
+		</div>
+	</div>
 
-				<!-- PHOTO-CONTAINER 1 -->
-				<div>
-					<div>
-						<img src="./images/moulin-rouge.jpg" alt="Cast of Moulin Rouge" width="700" height="467">
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 1 -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
 
-				<!-- PHOTO-CONTAINER 2 -->
-				<div>
-					<div>
-						<img src="./images/hamilton.jpg" alt="Cast of Hamilton" width="700" height="467">
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 2 -->
+			<div class="mySlides">
+				<div class="numbertext">1 / 4</div>
+				<img src="./images/moulin-rouge.jpg" style="width:100%">
+			</div>
 
-				<!-- PHOTO-CONTAINER 3 -->
-				<div>
-					<div>
-						<img src="./images/rent.jpg" alt="Cast of Rent" width="700" height="467">
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 3 -->
+			<div class="mySlides">
+				<div class="numbertext">2 / 4</div>
+				<img src="./images/hamilton.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3 / 4</div>
+				<img src="./images/rent.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">4 / 4</div>
+				<img src="./images/wizard-of-oz.jpg" style="width:100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<div class="column">
+				<img class="demo cursor" src="./images/moulin-rouge.jpg" style="width:100%" onclick="currentSlide(1)"
+					alt="Cast of Moulin Rouge">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="./images/hamilton.jpg" style="width:100%" onclick="currentSlide(2)"
+					alt="Cast of Hamilton">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="./images/rent.jpg" style="width:100%" onclick="currentSlide(3)"
+					alt="Cast of Rent">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="./images/thumb/wizard-of-oz_small.jpg" style="width:100%"
+					onclick="currentSlide(4)" alt="Cast of Wizard of Oz">
 			</div>
 		</div>
-	</section>
+	</div>
 	<!-- END GALLERY -->
 
 	<!-- VIDEOS -->
@@ -79,29 +123,27 @@
 	</section>
 
 	<!-- NEWLSETTER -->
-	<section>
-		<div id="newsletter">
-			<div>
-				<h2>Newsletter</h2>
-				<div>
-					<h3>Find out about new shows and tour dates. We've got your entertainment interests covered!
-					</h3>
-					<p>Enter your information below.
-					</p>
-					<div>
-						<form action="" method="post">
-							<input class="rsvp" type="text" value="" placeholder="First Name">
-							<input class="rsvp" type="text" value="" placeholder="Last Name">
-							<input class="rsvp" type="email" value="" placeholder="Email">
-							<input class="rsvp" type="tel" value="" placeholder="Phone Number">
-							<div class="form-spacer">
-								<label class="terms">Terms and Conditions</label>
-							</div>
-							<div>
-								<input type="submit" value="Submit">
-							</div>
-						</form>
-					</div>
+	<section id="newsletter">
+		<div class="container">
+			<h2 class="heading-padding">Newsletter</h2>
+			<div class="reservation">
+				<h3>Find out about new shows and tour dates. We've got your entertainment interests covered!
+				</h3>
+				<p class="rsvp-text">Enter your information below.
+				</p>
+				<div class="form-rsvp">
+					<form action="" method="post">
+						<input class="rsvp" type="text" value="" placeholder="First Name">
+						<input class="rsvp" type="text" value="" placeholder="Last Name">
+						<input class="rsvp" type="text" value="" placeholder="Email">
+						<input class="rsvp" type="text" value="" placeholder="Phone Number">
+						<div class="form-spacer">
+							<label class="terms">Terms and Conditions</label>
+						</div>
+						<div class="submit">
+							<input type="submit" value="Submit">
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

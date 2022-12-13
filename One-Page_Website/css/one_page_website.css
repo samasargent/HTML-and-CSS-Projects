@@ -1,11 +1,51 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 110%;
+    margin: 0;
 }
 
-h1, h2 {
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
     font-family: "Playfair Display", Georgia, serif;
     font-kerning: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ============================================
+    HOME STYLES
+==============================================*/
+#home {
+    background: url(../images/paramount-theatre.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top: 350px;
+    /* This is spacer before the Main title logo */
+    padding-bottom: 500px;
+    /* This is spacer after the Main title logo */
+    color: #fff;
+}
+
+.head-main {
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
+    color: #fff;
+    letter-spacing: 5pt;
+    word-spacing: 21pt;
+    font-size: 4.5em;
+    line-height: 2;
+    font-weight: 900;
+    padding: 10px;
 }
 
 /* ============================================
@@ -17,8 +57,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: rgb(113, 2, 93);
-    font-size: 80%;
-  }
+    font-size: 110%;
+}
 
 li {
     float: left;
@@ -31,22 +71,158 @@ li a {
     padding: 14px 16px;
     text-transform: uppercase;
     text-decoration: none;
-  }
+}
 
 /* Change the link color on hover */
 li a:hover {
-    background-color: rgb(177, 68, 157);;
-  }
+    background-color: rgb(177, 68, 157);
+}
 
 /* ============================================
     NEWLSETTER STYLES
 ==============================================*/
-form input[type="text"],
-input[type="email"],
-input[type="tel"] {
+form input[type="text"] {
     width: 25%;
-    margin: 0px 5%;
+    margin: 5px;
     border: 2px solid #808080;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ============================================
+    LIGHTBOX STYLES
+==============================================*/
+.row>.column {
+    padding: 15px 8px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create four equal columns that float next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide slides by default */
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next and previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the next button next to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color, slightly see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number Text (1 / 4, etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img { 
+    margin-bottom: -4px;
+}
+
+/* Caption Text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+img.thumb {
+    opacity: 0.6;
+}
+
+.active,
+.thumb:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
