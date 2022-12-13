@@ -93,7 +93,7 @@ form input[type="text"] {
     LIGHTBOX STYLES
 ==============================================*/
 .row>.column {
-    padding: 15px 8px;
+    padding: 5px 8px;
 }
 
 .row::after {
