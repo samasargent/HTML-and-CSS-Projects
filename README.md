@@ -17,4 +17,4 @@ This page is an example home for a drive-in movie theater, based on a local driv
 
 ### Seattle Musicals Site
 
-This page is an example home for promoting musicals that will be in Seattle based on a local drive-in theater. It's styled using CSS and contains a navbar, a modal gallery of images and a pop-up contact form.
+This page is an example home for promoting musicals that will be in Seattle. It's styled using CSS and contains a navbar, a modal gallery of images and a pop-up contact form.
