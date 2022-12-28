@@ -5,6 +5,7 @@
 	<title>Cat</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./css/cat-page.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -13,15 +14,20 @@
 		<a href="Cat_photo.html">Cat Picture</a>
 		<a href="Cat_video.html">Cat Video</a>
 	</nav>
+	
 	<div class="container">
 		<img src="images/kittens1.jpg" alt="A group of three kittens" class="header">
 		<div class="centered">
 			<h1>Centered</h1>
 		</div>
 	</div>
+
+	<div class="sticky">This will stick in place when scrolling down.</div>
+
 	<div class="grayscale">
-		<img src="images/cat02.jpg" alt="Cat in a christmas tree" class="center">
+		<img src="images/cat02.jpg" alt="Cat in a christmas tree" class="center catPhoto">
 	</div>
+
 	<div>
 		<h2>Cat Breeds</h2>
 		<table>
@@ -47,9 +53,37 @@
 			</tr>
 		</table>
 	</div>
+
+	<!-- SLIDESHOW -->
+	<div id="slideshow">
+		<div>
+			<img src="images/catslide01.jpg">
+		</div>
+		<div>
+			<img src="images/catslide02.jpg">
+		</div>
+		<div>
+			<img src="images/catslide03.jpg">
+		</div>
+	</div>
+	<!--END SLIDESHOW -->
+
 	<footer>
 		&#169; 2022 &nbsp;|&nbsp; www.allaboutcats.com
 	</footer>
+
+	<script>
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function () {
+			$('#slideshow > div:first')
+				.fadeOut(1000)
+				.next()
+				.fadeIn(1000)
+				.end()
+				.appendTo('#slideshow');
+		}, 3000);
+	</script>
 </body>
 
 </html>
