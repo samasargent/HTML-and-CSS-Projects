@@ -22,7 +22,6 @@
 				<li><a href="#home">Home</a></li>
 				<li><a href="#gallery">Gallery</a></li>
 				<li><a href="#video">Videos</a></li>
-				<li><a href="#newsletter">Newsletter</a></li>
 			</ul>
 		</div>
 	</div>
@@ -39,8 +38,8 @@
 	<!-- END HOME -->
 
 	<!-- GALLERY -->
-	<h2>Gallery</h2>
 	<div class="row" id="gallery">
+		<h2>Gallery</h2>
 		<div class="column">
 			<img src="./images/thumb/moulin-rouge_small.jpg" style="width:100%" onclick="openModal();currentSlide(1)"
 				class="hover-shadow cursor">
@@ -123,33 +122,23 @@
 		</div>
 	</section>
 
-	<!-- NEWLSETTER -->
-	<section id="newsletter">
-		<div class="container">
-			<h2 class="heading-padding">Newsletter</h2>
-			<div class="reservation">
-				<h3>Find out about new shows and tour dates. We've got your entertainment interests covered!
-				</h3>
-				<p class="rsvp-text">Enter your information below.
-				</p>
-				<div class="form-rsvp">
-					<form action="" method="post">
-						<input class="rsvp" type="text" value="" placeholder="First Name">
-						<input class="rsvp" type="text" value="" placeholder="Last Name">
-						<input class="rsvp" type="text" value="" placeholder="Email">
-						<input class="rsvp" type="text" value="" placeholder="Phone Number">
-						<div class="form-spacer">
-							<label class="terms">Terms and Conditions</label>
-						</div>
-						<div class="submit">
-							<input type="submit" value="Submit">
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END NEWLSETTER -->
+
+	<!-- SIGN UP FORM -->
+	<button class="open-button" onclick="openForm()">Find out more!</button>
+
+	<div class="form-popup" method="post" id="myForm">
+		<form action="" class="form-container">
+			<h2>Sign up for our newsletter!</h2>
+			<label for="fname">First Name</label>
+			<input type="text" placeholder="First Name" name="fname">
+			<label for="lname">Last Name</label>
+			<input type="text" placeholder="Last Name" name="lname">
+			<label for="email">Email</label>
+			<input type="text" placeholder="Email" name="email" required>
+			<button type="submit" class="btn">Sign up</button>
+			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		</form>
+	</div>
 
 	<!-- FOOTER -->
 	<footer>

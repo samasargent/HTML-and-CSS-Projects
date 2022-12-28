@@ -1,3 +1,11 @@
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+
 //Open the Modal
 function openModal() {
     document.getElementById("myModal").style.display = "block";
