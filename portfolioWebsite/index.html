@@ -1,48 +1,45 @@
 <!DOCTYPE html>
-<html>
-<!--Head-->
+<html lang="en">
+<!-- Head -->
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width">
     <title>Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="images/coding_icon.png">
     <link rel="stylesheet" type="text/css" href="css/portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:ital,wght@0,400;0,900;1,400;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
 </head>
 
-<!--Body-->
+<!-- Body -->
 
 <body class="Background">
 
-    <!--Navbar-->
+    <!-- Navbar -->
     <div class="Navbar">
         <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
-        <a href="#Contact">Contact</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
     </div>
 
-    <!--Breaks inserted to add space between navbar and the first heading-->
-    <br>
-    <br>
-
-    <!--Background video-->
+    <!-- Background video -->
     <div id="Home">
-        <video autoplay muted loop id="Typing_Video">
+        <video autoplay muted loop id="Coding_Video">
             <source src="images/video/coding.mp4" type="video/mp4">
-            <!--Display message if video fails to run-->
+            <!-- Display message if video fails to run -->
             Your browser does not support HTML5 video.
         </video>
     </div>
 
-    <!--Video text-->
+    <!-- Video text -->
     <div class="Video_Text">
         <h1 class="white-text">Samantha&#8217;s Portfolio</h1>
-
         <p class="center">
             <strong><q>In some ways, programming is like painting. You start with a blank canvas and certain basic raw
                     materials. <br>You use a combination of science, art, and craft to determine what to do with them.
@@ -56,13 +53,72 @@
         </p>
     </div>
 
-    <!--About section-->
+    <!-- Slideshow -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+
+                <!-- Slide 1 of 5 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/samSargent.jpg" alt="photo of Samantha Sargent">
+                    <div class="text">I'm available to assist you on your project!</div>
+                </div>
+                <!-- End SLide 1 -->
+
+                <!-- Slide 2 of 5 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg"
+                        alt="HTML, CSS, and JS logos">
+                    <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,
+                    </div>
+                </div>
+                <!-- End SLide 2 -->
+
+                <!-- Slide 3 of 5 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                </div>
+                <!-- End SLide 3 -->
+
+                <!-- Slide 4 of 5 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo">
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+                <!-- End SLide 4 -->
+
+                <!-- Slide 5 of 5 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/text-bubble-square.png" alt="Message bubble">
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                </div>
+                <!-- End SLide 5 -->
+
+                <!-- Previous and next buttons -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br> <!-- Adds a break between the images and the dots -->
+
+            <!-- Slideshow dots -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About section -->
     <div class="Row" id="About">
-        <!--Left column-->
+        <!-- Left column -->
         <div class="Column_2">
             <img src="images/laptop.jpg" alt="A laptop sitting on a table next to some plants">
         </div>
-        <!--Right column-->
+        <!-- Right column -->
         <div class="Column_1">
             <h1>About</h1>
             <p>
@@ -75,59 +131,56 @@
                 programming languages: HTML, CSS, JavaScript, SQL, C# and more.
                 <br>
                 <br>I am a full-stack developer and would love to work with you on your project.
-                <a href="#Contact">Contact</a> me below!
+                <a onclick="openForm()" class="contact">Contact</a> me below!
             </p>
         </div>
     </div>
 
-    <!--GitHub section-->
+    <!-- GitHub section -->
     <div class="Row" id="GitHub">
-        <!--Left column-->
+        <!-- Left column -->
         <div class="Column_1">
             <h1>GitHub</h1>
-            <p>
-                You can view my coding projects on my GitHub profile here:
+            <p>You can view my coding projects on my GitHub profile here:
                 <br>
+            </p>
             <p class="center"><a href="https://github.com/samasargent" target="_blank">Github</a>
             </p>
-            </p>
         </div>
-        <!--Right column-->
+        <!-- Right column -->
         <div class="Column_2">
             <a href="https://github.com/samasargent" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
         </div>
     </div>
 
-    <!--Contact section-->
-    <div class="Row" id="Contact">
-        <!--Contact image, left column-->
-        <div class="Column_2 Column_tall">
-            <img src="images/text-bubble.jpg" alt="Text bubble with three dots made of paper">
-        </div>
-        <!--Contact form, right column-->
-        <div class="Column_1 Column_tall">
-            <h1>Contact</h1>
-            <!--This specifies where and how to send the form data; we are leaving it blank-->
-            <form action="https://formspree.io/f/moqbbgjl" method="POST">
-                <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                <label>Name</label>
-                <input type="text" placeholder="Please enter your name here">
-                <label>Email</label>
-                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                <label>Message</label>
-                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                <input type="submit" value="SUBMIT">
+    <!-- Contact Form -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/moqbbgjl" method="POST" class="form-container">
+                <!-- Here we are utilizing a 3rd party service to submit the contact form data -->
+                <h1>Contact</h1>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name here" name="name" required>
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" placeholder="Enter your phone number here" name="phone">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email here" name="email" required>
+                <label for="message">Message</label>
+                <input type="text" id="message" placeholder="Write your message here" name="message">
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
             </form>
         </div>
     </div>
 
-    <!--Footer section-->
+    <!-- Footer section -->
     <footer>
-        <p>
         <p class="center">&copy; 2022 Samantha Sargent</p>
         <br>
-        </p>
     </footer>
+    <script src="JS/portfolio.js"></script>
 </body>
 
 </html>
