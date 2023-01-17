@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-2 mb-4">Welcome</h1>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NKwv4LZ_BIY?rel=0" allowfullscreen></iframe>
+    </div>
+    <div id="contentContainer">
+        <div id="circle"></div>
+    </div>
+</div>
+
+<script>
+  var circle = document.querySelector("#circle");
+
+    var xPos = 0;
+    var yPos = 0;
+    var angle = 0;
+
+    function animate() {
+      xPos += 5;
+      angle += .1;
+
+      yPos = Math.round(50 * Math.sin(angle));
+
+      circle.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+
+      if (Math.abs(xPos) >= 900) {
+        xPos = -500;
+      }
+
+      if (angle > 2 * Math.PI) {
+          angle = 0;
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+</script>
